@@ -8,10 +8,6 @@ terraform {
       source  = "hashicorp/kubernetes"
       version = "~> 2.32"
     }
-    docker = {
-      source  = "kreuzwerker/docker"
-      version = "~> 3.0"
-    }
   }
 }
 
@@ -23,8 +19,4 @@ provider "helm" {
 
 provider "kubernetes" {
   config_path = "~/.kube/config"
-}
-
-provider "docker" {
-  host = "unix:///run/user/1000/docker.sock"
 }
